@@ -52,28 +52,53 @@ namespace BinarySearchTree
             }
             currentNode = rootNode;
         }
+
+        
         public bool SearchTree(int info)
         {
-            
-            Node foundNode = currentNode;
-            while (foundNode != currentNode)
+
+            Node tempNode = rootNode;
+            while (true)
             {
-                if (info < foundNode.info)
-                {
-                    foundNode = foundNode.left;
-                }
-                else if (info > foundNode.info)
-                {
-                    foundNode = foundNode.right;
-                }
-                else if (info == foundNode.info)
+                if (tempNode.info == info)
                 {
                     return true;
-                
+
                 }
+                else if (info < tempNode.info)
+                {
+                    if (tempNode.left == null)
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        tempNode = tempNode.left;
+                    }
+
+
+                }
+                else if (info > tempNode.info)
+                {
+                    if (tempNode.right == null)
+                    {
+                        return false;
+                    }
+                    else
+                    {
+                        tempNode = tempNode.right;
+                    }
+                }
+
+                
+
             }
-            return false;
+            
+          
+           
+            
+            
         }
-        
+       
     }
 }

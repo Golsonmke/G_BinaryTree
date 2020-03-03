@@ -11,7 +11,7 @@ namespace BinarySearchTree
         static void Main(string[] args)
         {
             BinaryTree binaryTree = new BinaryTree();
-            binaryTree.Add(1);
+            binaryTree.Add(68);
             binaryTree.Add(2);
             binaryTree.Add(45);
             binaryTree.Add(43);
@@ -19,7 +19,8 @@ namespace BinarySearchTree
             binaryTree.Add(23);
             binaryTree.Add(67);
 
-            Console.WriteLine("Was it found? " +  binaryTree.SearchTree(25));
+            
+            Console.WriteLine("Was it found? " + binaryTree.SearchTree(19));
             Console.ReadLine();
 
         }
